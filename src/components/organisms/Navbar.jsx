@@ -13,16 +13,16 @@ const NavBar = ({ withCart = false, withAll = true, textBlack = false }) => {
     { name: 'Services', href: '#services' },
     { name: 'Who we work with', href: '#who-we-work-with' },
   ];
-  const companyName = 'Guadarrama & Associates';
+  const companyName = 'Guadarrama';
 
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className='absolute top-0 left-0 right-0 z-20'
+      className='bg-gray-900 absolute top-0 left-0 right-0 z-20'
     >
-      <div className='container mx-auto px-4'>
+      <div className=' bg-gray-900 container mx-auto px-4'>
         <div className='h-24 flex justify-between items-center border-b border-gray-700/50'>
           <div className='text-2xl font-bold text-white'>{companyName}</div>
           {withAll && (

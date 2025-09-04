@@ -154,9 +154,8 @@ const CartSectionComponent = () => {
   };
   return (
     <main className='flex flex-col w-full mt-32'>
-      <div className='bg-gray-900'>
-        <Navbar textBlack={true} withAll={false} />
-      </div>
+      <Navbar textBlack={true} withAll={false} />
+
       <div className='w-full flex justify-center mt-10 mb-20'>
         <div className='container px-4'>
           <Button
