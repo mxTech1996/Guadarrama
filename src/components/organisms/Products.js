@@ -1,272 +1,245 @@
-// En tu archivo: /components/ProductsSlider.js
+// En tu archivo: /components/ProductsSection.js
 'use client';
 
+import { useContext, useState } from 'react'; // Importamos useState
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
-// Importa los componentes y estilos de Swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-
-// Íconos para los botones de navegación
-import { LuChevronLeft, LuChevronRight } from 'react-icons/lu';
 import { dataSite } from '@/data';
-import { useContext } from 'react';
 import { CartContext } from 'ui-old-version';
 import { useRouter } from 'next/navigation';
 
-// --- Datos para la sección ---
-const projectsData = dataSite.products.filter(
-  (product) => parseFloat(product.price) > 60
-);
+// --- DATA: La información de productos que proporcionaste ---
+const productsData = dataSite.products;
 
-const projectsUnder60 = dataSite.products.filter(
-  (product) => parseFloat(product.price) <= 60
-);
+const ProductsSection = ({ isHome = true }) => {
+  // --- AÑADIDO: Estado para controlar si se muestran todos los productos ---
+  const [showAll, setShowAll] = useState(false);
 
-const ProductsSlider = ({ isHome = true }) => {
   const { handleAddOrRemoveProduct, validateProductInCart } =
     useContext(CartContext);
-
   const navigate = useRouter();
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0, scale: 0.95 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: 'easeOut' },
+    },
+  };
+
+  // --- AÑADIDO: Lógica para decidir qué productos mostrar ---
+  const productsToShow = showAll
+    ? productsData.slice(0, 8)
+    : productsData.slice(0, 3);
+
+  const productsOver60 = productsData.filter(
+    (product) => parseFloat(product.price) > 60
+  );
+
+  const productsUnder60 = productsData.filter(
+    (product) => parseFloat(product.price) <= 60
+  );
+
+  const productsHome = isHome ? productsToShow : productsOver60;
+
   return (
-    <section id='products' className='relative py-20 md:py-28 bg-gray-50'>
-      {/* Divisor ondulado superior */}
-      <div className='absolute top-0 left-0 w-full'>
-        <svg
-          viewBox='0 0 1440 100'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            d='M0 100C334.295 100 482.22 28.3333 720 28.3333C957.78 28.3333 1157.43 100 1440 100V0H0V100Z'
-            fill='white'
-          />
-        </svg>
-      </div>
-
+    <section id='products' className='py-20 md:py-28 bg-white'>
       <div className='container mx-auto px-4'>
-        <motion.div
-          initial={{ y: -20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          className='text-center mb-16'
-        >
-          <p className='font-semibold text-pink-600 mb-2 uppercase'>Our Work</p>
-          <h2 className='text-4xl md:text-5xl font-bold text-gray-900'>
-            Products Showcase
-          </h2>
-        </motion.div>
-
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-          className='relative'
-        >
-          <Swiper
-            modules={[Navigation]}
-            spaceBetween={30}
-            slidesPerView={1}
-            navigation={{
-              nextEl: '.swiper-button-next-custom',
-              prevEl: '.swiper-button-prev-custom',
-            }}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-            className='!pb-4' // Padding bottom para la sombra
+        <div>
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            className='text-center mb-16'
           >
-            {projectsData.map((project, index) => {
-              const isInCart = validateProductInCart(project.id);
-
-              const handleClick = () => {
-                if (isHome) {
-                  navigate.push('/contact');
-                  return;
-                }
-                handleAddOrRemoveProduct(project.id);
-              };
-
-              return (
-                <SwiperSlide key={index} className='h-full pb-8'>
-                  <div className='bg-white rounded-lg shadow-md hover:shadow-xl overflow-hidden flex flex-col h-full transition-shadow duration-300'>
-                    <div className='w-full h-56 relative'>
-                      <Image
-                        src={project.image}
-                        alt={project.name}
-                        layout='fill'
-                        objectFit='cover'
-                      />
-                    </div>
-                    <div className='p-6 flex flex-col flex-grow'>
-                      <p className='text-sm text-pink-600 font-medium'>
-                        Engineering
-                      </p>
-                      <h3 className='text-xl font-bold text-gray-800 mt-2 flex-grow'>
-                        {project.name}
-                      </h3>
-                      <div className='mt-4 pt-4 border-t border-gray-200 flex items-center justify-between'>
-                        <div className=' items-center gap-6'>
-                          <div>
-                            <p className='font-semibold text-gray-700 text-sm text-justify mr-10'>
-                              {project.description}
-                            </p>
-                          </div>
-                        </div>
-                        <div className='flex-shrink-0'>
-                          <p className='text-sm font-semibold text-gray-600'>
-                            $ {project.price} USD
-                          </p>
-                        </div>
-                      </div>
-                      {/* button add to cart */}
-                      <div className='mt-4'>
-                        <button
-                          onClick={handleClick}
-                          className={`w-full px-4 py-2 ${
-                            isInCart ? 'bg-red-600' : 'bg-pink-600'
-                          } text-white font-semibold rounded-md hover:bg-pink-700 transition-colors duration-300`}
-                        >
-                          {isHome
-                            ? 'Get a quote'
-                            : isInCart
-                            ? 'Remove from Cart'
-                            : 'Add to Cart'}
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-
-          {/* --- Botones de Navegación Personalizados --- */}
-          <div className='swiper-button-prev-custom absolute top-1/2 -translate-y-1/2 -left-8 z-10 p-2 bg-white rounded-full shadow-md cursor-pointer hover:bg-gray-100 transition-colors'>
-            <LuChevronLeft className='text-gray-700' size={24} />
-          </div>
-          <div className='swiper-button-next-custom absolute top-1/2 -translate-y-1/2 -right-8 z-10 p-2 bg-white rounded-full shadow-md cursor-pointer hover:bg-gray-100 transition-colors'>
-            <LuChevronRight className='text-gray-700' size={24} />
-          </div>
-        </motion.div>
-      </div>
-      <div className='container mx-auto px-4'>
-        <motion.div
-          initial={{ y: -20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          className='text-center mb-16'
-        >
-          <p className='font-semibold text-pink-600 mb-2 uppercase'>Our Work</p>
-          <h2 className='text-4xl md:text-5xl font-bold text-gray-900'>
-            Our additionals
-          </h2>
-        </motion.div>
-
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-          className='relative'
-        >
-          <Swiper
-            modules={[Navigation]}
-            spaceBetween={30}
-            slidesPerView={1}
-            navigation={{
-              nextEl: '.swiper-button-next-custom',
-              prevEl: '.swiper-button-prev-custom',
-            }}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-            className='!pb-4' // Padding bottom para la sombra
+            <h2 className='text-4xl md:text-5xl font-bold text-gray-900'>
+              Our Digital Toolkits
+            </h2>
+            <p className='mt-4 text-lg text-gray-600 max-w-2xl mx-auto'>
+              Actionable resources and frameworks designed by our experts to
+              accelerate your business growth.
+            </p>
+          </motion.div>
+          <motion.div
+            layout
+            className='transition-all duration-500 ease-in-out'
           >
-            {projectsUnder60.map((project, index) => {
-              const isInCart = validateProductInCart(project.id);
+            <motion.div
+              key={showAll ? 'all' : 'limited'} // Cambiamos la key para que Framer Motion detecte el cambio
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+              variants={containerVariants}
+              initial='hidden'
+              animate='visible'
+            >
+              {productsHome.map((product) => {
+                const inCart = validateProductInCart(product.id);
+                const handleClick = () => {
+                  if (isHome) {
+                    navigate.push('/contact');
+                    return;
+                  }
+                  handleAddOrRemoveProduct(product.id);
+                };
 
-              const handleClick = () => {
-                if (isHome) {
-                  navigate.push('/contact');
-                  return;
-                }
-                handleAddOrRemoveProduct(project.id);
-              };
-
-              return (
-                <SwiperSlide key={index} className='h-full pb-8'>
-                  <div className='bg-white rounded-lg shadow-md hover:shadow-xl overflow-hidden flex flex-col h-full transition-shadow duration-300'>
-                    <div className='w-full h-56 relative'>
-                      <Image
-                        src={project.image}
-                        alt={project.name}
-                        layout='fill'
-                        objectFit='cover'
-                      />
-                    </div>
-                    <div className='p-6 flex flex-col flex-grow'>
-                      <p className='text-sm text-pink-600 font-medium'>
-                        Engineering
-                      </p>
-                      <h3 className='text-xl font-bold text-gray-800 mt-2 flex-grow'>
-                        {project.name}
-                      </h3>
-                      <div className='mt-4 pt-4 border-t border-gray-200 flex items-center justify-between'>
-                        <div className=' items-center gap-6'>
-                          <div>
-                            <p className='font-semibold text-gray-700 text-sm text-justify mr-10'>
-                              {project.description}
-                            </p>
-                          </div>
-                        </div>
-                        <div className='flex-shrink-0'>
-                          <p className='text-sm font-semibold text-gray-600'>
-                            $ {project.price} USD
+                return (
+                  <motion.div
+                    key={product.id}
+                    variants={itemVariants}
+                    layout // Permite que la tarjeta se mueva suavemente a su nueva posición
+                    whileHover={{ y: -8 }}
+                    className='p-1 bg-gradient-to-br from-indigo-500 to-pink-500 rounded-xl h-full'
+                  >
+                    <div className='bg-gray-900 text-white rounded-lg h-full flex flex-col overflow-hidden'>
+                      <div className='w-full h-56 relative'>
+                        <Image
+                          src={product.image}
+                          alt={product.name}
+                          layout='fill'
+                          objectFit='cover'
+                        />
+                      </div>
+                      <div className='p-6 flex flex-col flex-grow'>
+                        <h3 className='text-xl font-bold text-white mb-3'>
+                          {product.name}
+                        </h3>
+                        <p className='text-gray-400 text-sm leading-relaxed flex-grow line-clamp-3'>
+                          {product.description}
+                        </p>
+                        <div className='flex justify-between items-center mt-6'>
+                          <p className='text-2xl font-bold text-indigo-400'>
+                            ${product.price}
                           </p>
+                          <button
+                            onClick={handleClick}
+                            className={`px-5 py-2  ${
+                              inCart ? 'bg-red-600' : 'bg-indigo-600'
+                            } text-white font-semibold rounded-md hover:bg-indigo-700 transition-colors text-sm`}
+                          >
+                            {inCart
+                              ? ' Remove from Cart'
+                              : isHome
+                              ? 'Contact Us'
+                              : 'Add to Cart'}
+                          </button>
                         </div>
                       </div>
-                      {/* button add to cart */}
-                      <div className='mt-4'>
-                        <button
-                          onClick={handleClick}
-                          className={`w-full px-4 py-2 ${
-                            isInCart ? 'bg-red-600' : 'bg-pink-600'
-                          } text-white font-semibold rounded-md hover:bg-pink-700 transition-colors duration-300`}
-                        >
-                          {isHome
-                            ? 'Get a quote'
-                            : isInCart
-                            ? 'Remove from Cart'
-                            : 'Add to Cart'}
-                        </button>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </motion.div>
+        </div>
+
+        <div>
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            className='text-center mb-16 mt-20'
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-gray-900'>
+              Our Additionals
+            </h2>
+          </motion.div>
+          <motion.div
+            layout
+            className='transition-all duration-500 ease-in-out'
+          >
+            <motion.div
+              key={showAll ? 'all' : 'limited'} // Cambiamos la key para que Framer Motion detecte el cambio
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+              variants={containerVariants}
+              initial='hidden'
+              animate='visible'
+            >
+              {productsUnder60.map((product) => {
+                const inCart = validateProductInCart(product.id);
+                const handleClick = () => {
+                  if (isHome) {
+                    navigate.push('/contact');
+                    return;
+                  }
+                  handleAddOrRemoveProduct(product.id);
+                };
+
+                return (
+                  <motion.div
+                    key={product.id}
+                    variants={itemVariants}
+                    layout // Permite que la tarjeta se mueva suavemente a su nueva posición
+                    whileHover={{ y: -8 }}
+                    className='p-1 bg-gradient-to-br from-indigo-500 to-pink-500 rounded-xl h-full'
+                  >
+                    <div className='bg-gray-900 text-white rounded-lg h-full flex flex-col overflow-hidden'>
+                      <div className='w-full h-56 relative'>
+                        <Image
+                          src={product.image}
+                          alt={product.name}
+                          layout='fill'
+                          objectFit='cover'
+                        />
+                      </div>
+                      <div className='p-6 flex flex-col flex-grow'>
+                        <h3 className='text-xl font-bold text-white mb-3'>
+                          {product.name}
+                        </h3>
+                        <p className='text-gray-400 text-sm leading-relaxed flex-grow line-clamp-3'>
+                          {product.description}
+                        </p>
+                        <div className='flex justify-between items-center mt-6'>
+                          <p className='text-2xl font-bold text-indigo-400'>
+                            ${product.price}
+                          </p>
+                          <button
+                            onClick={handleClick}
+                            className={`px-5 py-2  ${
+                              inCart ? 'bg-red-600' : 'bg-indigo-600'
+                            } text-white font-semibold rounded-md hover:bg-indigo-700 transition-colors text-sm`}
+                          >
+                            {inCart
+                              ? ' Remove from Cart'
+                              : isHome
+                              ? 'Contact Us'
+                              : 'Add to Cart'}
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </motion.div>
+        </div>
 
-          {/* --- Botones de Navegación Personalizados --- */}
-          <div className='swiper-button-prev-custom absolute top-1/2 -translate-y-1/2 -left-8 z-10 p-2 bg-white rounded-full shadow-md cursor-pointer hover:bg-gray-100 transition-colors'>
-            <LuChevronLeft className='text-gray-700' size={24} />
-          </div>
-          <div className='swiper-button-next-custom absolute top-1/2 -translate-y-1/2 -right-8 z-10 p-2 bg-white rounded-full shadow-md cursor-pointer hover:bg-gray-100 transition-colors'>
-            <LuChevronRight className='text-gray-700' size={24} />
-          </div>
-        </motion.div>
+        {!isHome && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className='text-center mt-16'
+          >
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className='font-semibold text-indigo-600 hover:text-indigo-700 transition-colors'
+            >
+              {showAll ? 'Show Less' : 'Show More Products'}
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
 };
 
-export default ProductsSlider;
+export default ProductsSection;

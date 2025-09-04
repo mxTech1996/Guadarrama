@@ -11,7 +11,7 @@ const NavBar = ({ withCart = false, withAll = true, textBlack = false }) => {
     { name: 'Products', href: '#products' },
     { name: 'About Us', href: '#about' },
     { name: 'Services', href: '#services' },
-    { name: 'Why Choose us', href: '#why-choose-us' },
+    { name: 'Who we work with', href: '#who-we-work-with' },
   ];
   const companyName = 'Guadarrama & Associates';
 
@@ -25,25 +25,31 @@ const NavBar = ({ withCart = false, withAll = true, textBlack = false }) => {
       <div className='container mx-auto px-4'>
         <div className='h-24 flex justify-between items-center border-b border-gray-700/50'>
           <div className='text-2xl font-bold text-white'>{companyName}</div>
-          <nav className='hidden lg:flex gap-10 text-sm text-gray-200'>
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className='hover:text-white transition-colors'
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
+          {withAll && (
+            <nav className='hidden lg:flex gap-10 text-sm text-gray-200'>
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className='hover:text-white transition-colors'
+                >
+                  {link.name}
+                </a>
+              ))}
+            </nav>
+          )}
           <div className='hidden md:flex items-center gap-6 text-gray-300'>
             {/* get a quote */}
-            <a
-              href='/contact'
-              className='hidden md:block px-6 py-2 bg-indigo-400 font-semibold rounded-md hover:bg-indigo-700 transition-colors'
-            >
-              Get a Quote
-            </a>
+            {withCart ? (
+              <ShopButtonWithCounter />
+            ) : (
+              <a
+                href='/contact'
+                className='hidden md:block px-6 py-2 bg-indigo-400 font-semibold rounded-md hover:bg-indigo-700 transition-colors'
+              >
+                Get a Quote
+              </a>
+            )}
           </div>
         </div>
       </div>

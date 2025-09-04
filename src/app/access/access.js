@@ -75,12 +75,14 @@ const LoginPage = () => {
   return (
     <>
       <Navbar withAll={false} textBlack={true} />
-      <main className='flex items-center justify-center min-h-screen bg-gray-100'>
-        <div className='w-full max-w-md p-8 space-y-8 bg-white rounded-xl shadow-lg'>
+      <main className='flex items-center justify-center min-h-screen bg-gradient-to-br from-indigo-800 via-purple-700 to-pink-700'>
+        {/* --- CAMBIO: Tarjeta con efecto "glassmorphism" --- */}
+        <div className='w-full max-w-md p-8 space-y-8 bg-black/20 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl'>
           {/* Header Section */}
           <div className='text-center'>
-            <h1 className='text-3xl font-bold text-gray-800'>Welcome Back</h1>
-            <p className='mt-2 text-gray-500'>
+            {/* --- CAMBIO: Colores de texto para fondo oscuro --- */}
+            <h1 className='text-3xl font-bold text-white'>Welcome Back</h1>
+            <p className='mt-2 text-indigo-200/90'>
               Please sign in to access your account
             </p>
           </div>
@@ -90,11 +92,12 @@ const LoginPage = () => {
             {/* Email Input */}
             <div>
               <label
-                htmlFor='email'
-                className='block mb-2 text-sm font-medium text-gray-700'
+                htmlFor='username'
+                className='block mb-2 text-sm font-medium text-indigo-200'
               >
                 Username
               </label>
+              {/* --- CAMBIO: Estilo de inputs para tema oscuro --- */}
               <input
                 id='username'
                 name='username'
@@ -103,7 +106,7 @@ const LoginPage = () => {
                 required
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                className='w-full px-4 py-3 text-gray-800 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300'
+                className='w-full px-4 py-3 text-white bg-black/30 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-all'
                 placeholder='you@example.com'
               />
             </div>
@@ -112,10 +115,11 @@ const LoginPage = () => {
             <div>
               <label
                 htmlFor='password'
-                className='block mb-2 text-sm font-medium text-gray-700'
+                className='block mb-2 text-sm font-medium text-indigo-200'
               >
                 Password
               </label>
+              {/* --- CAMBIO: Estilo de inputs para tema oscuro --- */}
               <input
                 id='password'
                 name='password'
@@ -124,19 +128,20 @@ const LoginPage = () => {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className='w-full px-4 py-3 text-gray-800 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300'
+                className='w-full px-4 py-3 text-white bg-black/30 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-all'
                 placeholder='••••••••'
               />
             </div>
 
             {/* Error Message */}
-            {error && <div className='text-sm text-red-600'>{error}</div>}
+            {error && <div className='text-sm text-red-400'>{error}</div>}
 
             {/* Submit Button */}
             <div>
+              {/* --- CAMBIO: Estilo de botón consistente con el tema --- */}
               <button
                 type='submit'
-                className='w-full px-4 py-3 font-semibold text-white bg-pink-600 rounded-lg hover:bg-pink-ring-pink-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-300 transition-colors duration-300'
+                className='w-full px-4 py-3 font-semibold text-white bg-pink-600 rounded-lg hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-pink-500 transition-colors duration-300'
               >
                 Sign In
               </button>

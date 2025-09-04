@@ -1,4 +1,4 @@
-export const pageName = 'Mirazul';
+export const pageName = 'Guadarrama';
 
 export const email = 'mirazul@emailsecure.lat';
 import { IoCall, IoFileTraySharp, IoMail } from 'react-icons/io5';
@@ -66,284 +66,287 @@ export const benefitsData = [
 ];
 
 export const dataSite = {
-  name: 'Mirazul',
+  name: 'Guadarrama',
   url: 'https://es.wiktionary.org/wiki/hol',
-  telephone: '5523021842',
-  email: 'mirazul@emailsecure.lat',
+  telephone: '5535734187',
+  email: 'guadarrama@emailsecure.lat',
   address:
-    'AV HOMERO 538, 303 B, POLANCO V SECCION, MIGUEL HIDALGO, CIUDAD DE MEXICO, C.P. 11560',
+    'LUZ SAVIÑON 2007, L 1, NARVARTE ORIENTE, BENITO JUAREZ, CIUDAD DE MEXICO, CP 03023',
   description:
-    'Our website is the go to digital platform for businesses and individuals seeking innovative engineering solutions. We offer a wide range of specialized services, from the design and development of industrial, civil, and mechanical projects to technical consulting and process optimization.',
-  subtitle: 'Engineering Excellence, Tailored for Your Success',
+    'Our website is designed to provide comprehensive solutions in administrative consulting, helping companies, entrepreneurs, and organizations optimize their management, improve efficiency, and achieve their strategic goals. Through a professional and personalized approach, we offer guidance in planning, organization, resource control, and key decision-making, tailored to the specific needs of each client.',
+  subtitle: 'Strategic Solutions for Effective Business Management',
   image_hero:
-    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/mira_1_.png',
+    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/sitio_1.jpeg',
   image_hero2:
-    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/mira._2.png',
+    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/guadarma_ima_.jpg',
   iconImage:
-    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/mirazul-high-resolution-logo.png',
+    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/guadarrama-s-de-rl-de-cv-high-resolution-logo_gF5r6nn.png',
   info: [],
   services: [
     {
-      title: 'Project Design & Development',
+      title: 'Human Resources Management Consulting',
       description:
-        'Design and development of industrial, civil, or mechanical projects.',
+        'Design of policies, recruitment, training, and talent development.',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mira_3.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/guadarrama._1.png',
     },
     {
-      title: 'Technical Consulting',
+      title: 'Performance Evaluation & KPI Development',
       description:
-        'Specialized engineering consulting to optimize processes and solutions.',
+        'Creation of key performance indicators to measure and improve results.',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mira_4_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/guadarrama_2_.png',
     },
     {
-      title: 'Process Optimization & Efficiency',
+      title: 'Risk Management & Compliance Advisory',
       description:
-        'Improvement of production and operational processes for greater efficiency.',
+        'Identification of operational and administrative risks, along with prevention and compliance plans.',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mirarazul_5.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/guadarrama_3_.png',
     },
     {
-      title: 'Structural Analysis & Testing',
+      title: 'Customer Relationship Management (CRM) Strategies',
       description:
-        'Structural analysis and testing to ensure safety and quality.',
+        'Implementation of systems and strategies to enhance customer management.',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mira_6_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/guadarrama_4.png',
     },
     {
-      title: 'Sustainable & Innovative Solutions',
+      title: 'Digital Transformation & Administrative Automation',
       description:
-        'Implementation of sustainable and innovative solutions tailored to each project.',
+        'Guidance in adopting technologies and digital tools to optimize administrative processes.',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mira_7_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/guadarrama_5__COU4WY2.png',
     },
   ],
   references: [
     {
-      name: 'Raul,Product Development Manager',
+      name: 'Adriana Gomez',
       description:
-        'The CAD & 3D Modeling service we received was exceptional. The team was not only fast and accurate, but they also offered design suggestions that improved the functionality of our part. Communication was seamless, and the client portal made it easy to track progress. We will definitely use their services again for future prototypes.',
+        'We were struggling to optimize our supply chain and reduce operational costs without sacrificing quality. The consulting team provided us with a comprehensive analysis and a clear, realistic action plan. Their industry expertise was evident from day one. Thanks to their implementation of Lean methodologies, we have successfully reduced our cycle times by 20% and increased overall plant efficiency. An investment that paid for itself in less than a year',
       rating: 5,
       image: null,
     },
     {
-      name: 'Alejandro Roma',
+      name: 'Omar Hernandez',
       description:
-        'We needed a complete structural analysis for a complex project, and the report they provided was incredibly detailed and easy to understand. Their team identified potential issues we had overlooked and offered practical, cost-effective solutions. Their professionalism and thoroughness gave us the confidence to move forward with the project. Highly recommended!',
+        'As a founder, I was overwhelmed with the need to structure our internal processes while trying to scale the business. The consultancy helped us establish a solid corporate governance framework and define key performance indicators (KPIs) that truly matter. Their personalized approach and their patience in understanding us were key. We now have a clear roadmap for growth, and decision-making is much simpler and data driven.',
       rating: 5,
       image: null,
     },
     {
-      name: 'Marlen Mendez',
+      name: 'Jasoon Hellman',
       description:
-        'We were looking to improve the efficiency of our production line, and their process optimization audit and solutions were a total game-changer. The team identified key bottlenecks and helped us implement a new workflow that has increased our output by 15%. The investment paid for itself in a matter of months. Excellent service.',
+        "We were facing high employee turnover and low team morale. We decided to seek external help to redesign our employee engagement program. The consultants conducted surveys and focus groups that gave us incredibly valuable insight into our team's needs. Together, we developed a new career path plan and a fairer, more transparent performance evaluation system. The results have been fantastic; employee satisfaction has improved remarkably.",
       rating: 5,
       image: null,
     },
     {
-      name: 'Javier Romero',
+      name: 'Human Resources Manager',
       description:
-        'The implementation of custom automation modules for our warehouse has been a resounding success. The engineering team worked closely with us to understand our unique challenges and designed a solution that integrated perfectly with our existing systems. The efficiency and reduction in errors have exceeded our expectations.',
+        "The leadership transition to the next generation in our family business presented complex challenges. We needed an external, neutral perspective to facilitate the process. The consultants handled the situation with impeccable professionalism and discretion, helping us develop a succession plan that respected the company's history while preparing it for the future.",
       rating: 5,
       image: null,
     },
     {
-      name: 'David Gutierrez',
+      name: 'Chief Financial Officer',
       description:
-        'We had an urgent technical challenge and needed expert consultation immediately. The engineering team not only responded quickly but also provided us with clear and actionable advice that helped us resolve the issue in record time. Their deep knowledge and ability to explain complex concepts were truly impressive',
+        "Our goal was clear: improve profitability. The consulting team performed a deep financial analysis and identified areas of opportunity we hadn't considered. From renegotiating supplier contracts to optimizing our pricing strategy, every recommendation was backed by rigorous analysis.",
       rating: 5,
       image: null,
     },
   ],
   products: [
     {
-      id: 1170,
-      name: 'Energy Efficiency Audits',
+      id: 1180,
+      name: 'Corporate Governance Handbook',
       category: null,
       description:
-        'Energy Efficiency Audits are systematic evaluations of a building, facility, or industrial process to identify opportunities for reducing energy consumption, lowering costs, and minimizing environmental impact. These audits provide actionable insights to improve energy performance and ensure compliance with sustainability standards.',
-      price: '150.00',
-      stock: 100,
-      content: '',
-      product_type: 'NORMAL',
-      image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_12.png',
-      image2: null,
-      image3: null,
-    },
-    {
-      id: 1167,
-      name: 'Prototype Development Kits',
-      category: null,
-      description:
-        'Prototype Development Kits (PDKs) are comprehensive toolsets designed to help developers, engineers, and designers quickly create, test, and refine new product ideas or electronic systems. They provide a hands-on environment for experimentation and proof-of-concept development.',
+        'Practical guide designed to help board members and executives implement good corporate governance practices.',
       price: '230.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_9.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/guadarrama._6.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1168,
-      name: 'Structural Analysis Reports',
+      id: 1181,
+      name: 'Project Management Toolkit',
       category: null,
       description:
-        'Structural Analysis Reports provide detailed assessments of a building, infrastructure, or mechanical system’s structural integrity. They are used by engineers, architects, and construction professionals to ensure safety, compliance with regulations, and optimal design performance',
-      price: '240.00',
+        'The term Project Management Toolkit refers to a comprehensive set of tools, templates, and guidelines designed to assist project managers in planning, executing, and monitoring projects effectively. These toolkits are widely used in various industries to ensure projects are completed on time, within scope, and on budget',
+      price: '220.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_10_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/guadarrama_7_.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1169,
-      name: 'Automation System Solutions',
+      id: 1182,
+      name: 'Employee Engagement Program',
       category: null,
       description:
-        'Automation System Solutions are integrated systems designed to automate, monitor, and optimize processes in industrial, commercial, or residential settings. They combine hardware, software, and control technologies to improve efficiency, reduce errors, and enable real-time management.',
-      price: '140.00',
+        'An Employee Engagement Program is a strategic initiative designed to foster a positive work environment where employees feel valued, connected, and motivated. Such programs aim to enhance job satisfaction, reduce turnover, and boost overall organizational performance.',
+      price: '200.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_11.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/guadarrama_8.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1174,
-      name: 'Technical Documentation Services',
+      id: 1183,
+      name: 'Budget Planning Template Pack',
       category: null,
       description:
-        'Technical Documentation Services provide professional creation, organization, and management of documents that explain, instruct, or support the use of products, systems, or processes. These services ensure clarity, compliance, and accessibility for engineers, developers, clients, and end-users.',
-      price: '90.00',
+        'A Budget Planning Template Pack is a comprehensive collection of customizable templates designed to help individuals and organizations plan, track, and manage their finances effectively. These packs typically include various templates tailored for different budgeting needs, such as personal, household, project, or business budgets.',
+      price: '130.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_16_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/guadarrama_9_.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1171,
-      name: 'Engineering Software Tools',
+      id: 1184,
+      name: 'Operational Efficiency Audit Report',
       category: null,
       description:
-        'Engineering Software Tools are specialized applications designed to assist engineers in designing, modeling, simulating, and analyzing products, structures, or systems. They enhance precision, efficiency, and collaboration in engineering projects across various disciplines.',
+        'An Operational Efficiency Audit Report is a comprehensive evaluation that assesses how effectively an organization utilizes its resources such as time, personnel, and capital to achieve its objectives. Unlike financial audits, which focus on monetary aspects, operational audits delve into the processes and systems that drive performance.',
+      price: '160.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/guadarrama_10_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1185,
+      name: 'Customer Service Excellence Guide',
+      category: null,
+      description:
+        'A Customer Service Excellence Guide is a comprehensive resource designed to help organizations and their teams deliver outstanding customer service. These guides typically offer strategies, best practices, and frameworks to enhance customer interactions, ensuring satisfaction and loyalty.',
       price: '189.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/miraazul_13.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/guadarrama_11.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1172,
-      name: 'CAD & 3D Modeling Services',
+      id: 1186,
+      name: 'Succession Planning Framework',
       category: null,
       description:
-        'CAD & 3D Modeling Services provide professional computer-aided design and three-dimensional modeling solutions for products, structures, machinery, or architectural projects. These services help clients visualize, plan, and refine designs before production or construction.',
-      price: '120.00',
+        'A Succession Planning Framework is a strategic tool designed to ensure that an organization has a continuous pipeline of qualified leaders and key personnel ready to fill critical roles as they become available.it focuses on identifying talent, developing skills, and preparing employees for future leadership positions, thereby minimizing disruption and maintaining organizational continuity',
+      price: '98.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mia_azul_14.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/guadrama_12.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1173,
-      name: 'Project Management Packages',
+      id: 1187,
+      name: 'Innovation & Growth Roadmap',
       category: null,
       description:
-        'Project Management Packages are comprehensive solutions designed to help organizations plan, execute, monitor, and complete projects efficiently. They provide tools, templates, and methodologies to streamline workflows, manage resources, and ensure projects are delivered on time and within budget.',
-      price: '240.00',
+        "An Innovation & Growth Roadmap is a strategic planning tool that outlines an organization's path to achieving sustainable growth through innovation. It serves as a visual guide that aligns teams, resources, and initiatives towards common objectives, ensuring that innovation efforts are purposeful and impactful.",
+      price: '137.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_15_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/guadarrama_13.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1175,
-      name: '3D Modeling for Mechanical Parts',
+      id: 1188,
+      name: 'Strategic Planning Templates',
       category: null,
-      description: '3D modeling specifically for mechanical components.',
-      price: '20.00',
+      description:
+        'A Strategic Planning Template is a pre-designed tool that assists organizations in developing, documenting, and executing their strategic plans. These templates provide a structured approach to aligning goals, initiatives, and resources, ensuring that the organization moves cohesively toward its long term objectives.',
+      price: '17.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_17_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/guadraama_14.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1176,
-      name: 'Custom Automation Modules',
+      id: 1189,
+      name: 'KPI Tracking Spreadsheets',
       category: null,
-      description: 'Customized automation modules for industrial processes.',
-      price: '25.00',
+      description: 'Spreadsheets to monitor key performance indicators.',
+      price: '27.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/miraazul_18.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/guadarrama_15_.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1177,
-      name: 'Structural Integrity Testing',
+      id: 1190,
+      name: 'Employee Feedback Surveys',
       category: null,
-      description: 'Specialized testing of structural integrity.',
+      description:
+        'Surveys designed to assess employee satisfaction and performance.',
       price: '30.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/miraazul_19.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/guadrama_16_.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1178,
-      name: 'Energy Consumption Reports',
+      id: 1191,
+      name: 'Process Mapping Diagrams',
       category: null,
-      description: 'Detailed reports on energy usage and efficiency.',
+      description: 'Visual diagrams to analyze and optimize workflows',
+      price: '35.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/guadarrama_17_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1192,
+      name: 'Training Video Modules',
+      category: null,
+      description:
+        'Educational videos to reinforce leadership and management skills.',
       price: '40.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mirazul_20_.png',
-      image2: null,
-      image3: null,
-    },
-    {
-      id: 1179,
-      name: 'Technical Drafting & Schematics',
-      category: null,
-      description: 'Preparation of detailed technical drawings and schematics.',
-      price: '48.00',
-      stock: 100,
-      content: '',
-      product_type: 'NORMAL',
-      image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/miraazul_21.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/guadarrama_18_.png',
       image2: null,
       image3: null,
     },
