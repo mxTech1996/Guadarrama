@@ -9,7 +9,7 @@ import Footer from '@/components/organisms/Footer';
 import Container from '@/components/atoms/Container';
 import { CartContext, Button as VButton } from 'ui-old-version';
 import { useContext } from 'react';
-import { productsData } from '@/data';
+import { dataSite } from '@/data';
 
 export default function Product({ params }) {
   const id = params.id;
@@ -17,7 +17,7 @@ export default function Product({ params }) {
     useContext(CartContext);
   const isAdded = validateProductInCart(id);
 
-  const product = productsData.find((item) => +item.id === +id);
+  const product = dataSite.products.find((item) => +item.id === +id);
 
   const router = useRouter();
   return (
