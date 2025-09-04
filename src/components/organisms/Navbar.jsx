@@ -41,7 +41,7 @@ const NavBar = ({ withCart = false, withAll = true, textBlack = false }) => {
           <div className='hidden md:flex items-center gap-6 text-gray-300'>
             {/* get a quote */}
             {withCart ? (
-              <ShopButtonWithCounter />
+              <ShopButtonWithCounter itemCount={products.length} />
             ) : (
               <a
                 href='/contact'
