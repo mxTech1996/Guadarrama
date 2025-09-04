@@ -5,14 +5,7 @@
 
 import { motion } from 'framer-motion';
 // Íconos para la sección
-import {
-  LuCompass,
-  LuCog,
-  LuTrendingUp,
-  LuTwitter,
-  LuLinkedin,
-  LuChevronDown,
-} from 'react-icons/lu';
+import { LuCompass, LuCog, LuTrendingUp, LuChevronDown } from 'react-icons/lu';
 
 // --- Componente Principal de la Sección Hero ---
 const HeroSection = () => {
@@ -67,7 +60,7 @@ const HeroSection = () => {
             variants={itemVariants}
             className='text-5xl md:text-7xl font-extrabold leading-tight mb-8'
           >
-            "Unlocking Your Business's True Potential."
+            Unlocking Your Business's True Potential.
           </motion.h1>
 
           {/* --- Cajas de Características --- */}
