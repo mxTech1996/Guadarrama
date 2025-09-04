@@ -1,6 +1,3 @@
-// CÓDIGO COMPLETO Y CORREGIDO PARA LA PRIMERA SECCIÓN
-// Guárdalo en un archivo como: /components/Hero.js
-
 'use client';
 
 import { motion } from 'framer-motion';
@@ -60,7 +57,7 @@ const HeroSection = () => {
             variants={itemVariants}
             className='text-5xl md:text-7xl font-extrabold leading-tight mb-8'
           >
-            Unlocking Your Business's True Potential.
+            Unlocking Your Business&#39;s True Potential.
           </motion.h1>
 
           {/* --- Cajas de Características --- */}
@@ -81,7 +78,6 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Flecha animada para invitar al scroll */}
       <motion.div
         className='absolute bottom-10'
         initial={{ y: 0, opacity: 0.7 }}
