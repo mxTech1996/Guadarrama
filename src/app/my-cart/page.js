@@ -153,8 +153,8 @@ const CartSectionComponent = () => {
     setIsValidDiscount(validDiscountCode.includes(value));
   };
   return (
-    <main className='flex flex-col w-full'>
-      <Navbar />
+    <main className='flex flex-col w-full mt-32'>
+      <Navbar textBlack={true} withAll={false} />
       <div className='w-full flex justify-center mt-10 mb-20'>
         <div className='container px-4'>
           <Button
@@ -176,7 +176,7 @@ const CartSectionComponent = () => {
             {step === 'cart' && (
               <CartSection
                 currency='USD'
-                variant='grid'
+                variant='table'
                 gridColumns={3}
                 buttonProps={{
                   onClick: () => setStep(step === 'cart' ? 'payment' : 'cart'),

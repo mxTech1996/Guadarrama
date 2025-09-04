@@ -1,84 +1,70 @@
 'use client';
-import Link from 'next/link';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
-import { PiHandsClappingDuotone } from 'react-icons/pi';
 
-import Container from '../atoms/Container';
+import { motion } from 'framer-motion';
 import { useContext } from 'react';
+import { FaShoppingBag } from 'react-icons/fa';
 import { CartContext } from 'ui-old-version';
-// import phone icon
-import { PiPhoneCall } from 'react-icons/pi';
 
-const Navbar = ({ withAll = true, withCart = false }) => {
+const NavBar = ({ withCart = false, withAll = true, textBlack = false }) => {
   const { products } = useContext(CartContext);
+  const navLinks = [
+    { name: 'Products', href: '#products' },
+    { name: 'About Us', href: '#about' },
+    { name: 'Services', href: '#services' },
+    { name: 'Why Choose us', href: '#why-choose-us' },
+  ];
+  const companyName = 'Guadarrama & Associates';
 
   return (
-    <nav className='w-full px-4 md:px-0 bg-blue-400'>
-      <Container className='flex justify-between h-20 items-center'>
-        <div>
-          <Link
-            href='/'
-            className='text-secondary font-black text-xs sm:text-sm flex gap-2 items-center leading-none text-white'
-          >
-            <span className='text-lg'>
-              <PiHandsClappingDuotone />
-            </span>
-
-            <p>Golarzep</p>
-          </Link>
-        </div>
-
-        {withAll && (
-          <div className=' flex flex-1 justify-end items-center gap-4 sm:gap-10 text-sm sm:text-base font-medium text-primary sm:text-white'>
-            <Link href='#our-services'>Our Services</Link>
-            <Link href='#benefits' className='hidden sm:block'>
-              Benefits
-            </Link>
-
-            {withCart ? <CartButton /> : <GetAQuoteButton />}
+    <motion.header
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      className='absolute top-0 left-0 right-0 z-20'
+    >
+      <div className='container mx-auto px-4'>
+        <div className='h-24 flex justify-between items-center border-b border-gray-700/50'>
+          <div className='text-2xl font-bold text-white'>{companyName}</div>
+          <nav className='hidden lg:flex gap-10 text-sm text-gray-200'>
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className='hover:text-white transition-colors'
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
+          <div className='hidden md:flex items-center gap-6 text-gray-300'>
+            {/* get a quote */}
+            <a
+              href='/contact'
+              className='hidden md:block px-6 py-2 bg-indigo-400 font-semibold rounded-md hover:bg-indigo-700 transition-colors'
+            >
+              Get a Quote
+            </a>
           </div>
-        )}
-      </Container>
-    </nav>
-  );
-};
-
-export default Navbar;
-
-const CartButton = () => {
-  const { products } = useContext(CartContext);
-
-  return (
-    <div className='bg-third rounded-md p-2.5 flex justify-center items-center'>
-      <Link
-        href='/my-cart'
-        className='hover:text-primary hover:underline flex items-center md:text-lg'
-      >
-        <div className='relative '>
-          {products.length > 0 && (
-            <div className='w-5 h-5 flex items-center justify-center rounded-full bg-secondary absolute -top-4 -right-4'>
-              <p className='text-white text-[10px]'>
-                {products.length > 99 ? '' : products.length}
-              </p>
-            </div>
-          )}
-          <AiOutlineShoppingCart className='text-white' size={17} />
         </div>
-      </Link>
-    </div>
+      </div>
+    </motion.header>
   );
 };
 
-const GetAQuoteButton = () => {
+export default NavBar;
+
+const ShopButtonWithCounter = ({ itemCount }) => {
   return (
-    <div className='bg-third rounded-md p-2.5 flex justify-center items-center'>
-      <Link
-        href='/contact'
-        className='hover:text-primary hover:underline flex items-center md:text-lg'
-      >
-        <p className='text-white mr-3'>Get a Quote</p>
-        <PiPhoneCall className='text-white' size={25} />
-      </Link>
-    </div>
+    <a
+      href='/my-cart'
+      className='hidden md:block px-6 py-2 bg-pink-600 text-gray-900 font-semibold rounded-full hover:bg-[#3b3f6b] transition-all duration-300 transform hover:scale-105'
+    >
+      <FaShoppingBag className='inline-block mr-2 text-white ' />
+      {itemCount > 0 && (
+        <span className='absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full px-2 py-1'>
+          {itemCount}
+        </span>
+      )}
+    </a>
   );
 };

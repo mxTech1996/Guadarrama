@@ -1,8 +1,6 @@
-export const pageName = 'Golarzep';
-export const phoneNumber = '+525511447994';
-export const address =
-  'RIO POO NUMERO 43 COLONIA CUAUHTEMOC CP 6500 CUAUHTEMOC CIUDAD DE MEXICO';
-export const email = 'info@golarzep.com';
+export const pageName = 'Mirazul';
+
+export const email = 'mirazul@emailsecure.lat';
 import { IoCall, IoFileTraySharp, IoMail } from 'react-icons/io5';
 
 export const navData = [
@@ -43,21 +41,6 @@ export const footerData = [
   },
 ];
 
-export const contactData = [
-  {
-    Icon: IoCall,
-    text: phoneNumber,
-  },
-  {
-    Icon: IoFileTraySharp,
-    text: address,
-  },
-  {
-    text: email,
-    Icon: IoMail,
-  },
-];
-
 export const benefitsData = [
   {
     id: 1,
@@ -82,270 +65,305 @@ export const benefitsData = [
   },
 ];
 
-export const productsData = [
-  {
-    id: 1,
-    price: '45.00',
-    name: 'CREATIVE WRITING',
-    description:
-      'Creative writing helps businesses stand out with unique content that engages their audience and cultivates brand loyalty. It can also inspire innovation and fresh perspectives.',
-    image: '/images/social-3.jpg',
-    stock: 1000,
-    features: [
-      'Unique and engaging content creation',
-      'Brand storytelling techniques',
-      'Audience engagement strategies',
-      'Innovation and creativity in writing',
-      'Effective communication through written word',
-    ],
-  },
-  {
-    id: 2,
-    price: '100.00',
-    name: 'ADVERTISING CONTENT',
-    description:
-      'Advertising content helps businesses promote their products or services and increase sales. It can be used to target specific audiences and create memorable brand experiences.',
-    image: '/images/business-2.jpg',
-    stock: 1000,
-    features: [
-      'Targeted advertising strategies',
-      'Brand messaging and positioning',
-      'Conversion-focused content creation',
-      'Measurable advertising campaign results',
-      'Memorable and impactful ad campaigns',
-    ],
-  },
-  {
-    id: 3,
-    price: '150.00',
-    name: 'SOCIAL MEDIA CONTENT',
-    description:
-      'Social media content helps businesses build their online presence and engage with their audience. It can be used to showcase products or services, share company news and promote brand loyalty.',
-    image: '/images/social-2.jpg',
-    stock: 1000,
-    features: [
-      'Social media platform optimization',
-      'Content calendar planning and scheduling',
-      'Audience targeting and engagement',
-      'Visual content creation (images, videos)',
-      'Analytics and performance tracking',
-    ],
-  },
-  {
-    id: 4,
-    price: '100.00',
-    name: 'CORPORATE CONTENT',
-    description:
-      'Corporate content helps businesses establish their brand identity and communicate their values to stakeholders. It can be used for internal communication, investor relations, and public relations.',
-    image: '/images/business-1.jpg',
-    stock: 1000,
-    features: [
-      'Brand identity development',
-      'Internal communication materials',
-      'Investor relations documents',
-      'Public relations content creation',
-      'Corporate storytelling and messaging',
-    ],
-  },
-  {
-    id: 5,
-    price: '60.00',
-    name: 'VIDEO PRODUCTION',
-    description:
-      'Video production is a powerful tool for businesses to convey their message effectively. This course covers video shooting, editing, and storytelling techniques to create compelling videos that captivate the audience.',
-    image: '/images/video.jpg',
-    stock: 8,
-    content: [
-      'Video shooting techniques',
-      'Video editing using industry-standard software',
-      'Storytelling through video',
-      'Effective video marketing strategies',
-      'Scriptwriting for video content',
-    ],
-  },
-  {
-    id: 6,
-    price: '55.00',
-    name: 'SOCIAL MEDIA MARKETING',
-    description:
-      'Social media marketing is essential for businesses to reach and engage their target audience. This course provides strategies for effective social media campaigns, content creation, and analytics to drive business growth.',
-    image: '/images/social-media.jpg',
-    stock: 3,
-    content: [
-      'Social media strategy development',
-      'Creating compelling social media content',
-      'Audience targeting and engagement',
-      'Social media advertising techniques',
-      'Analytics and measurement for social media success',
-    ],
-  },
-  {
-    id: 7,
-    price: '35.00',
-    name: 'GRAPHIC DESIGN',
-    description:
-      'Graphic design plays a crucial role in branding and visual communication. This course teaches the fundamentals of graphic design, including color theory, typography, layout design, and using design software.',
-    image: '/images/graphic.jpg',
-    stock: 10,
-    content: [
-      'Principles of graphic design',
-      'Color theory and typography',
-      'Layout design and composition',
-      'Using industry-standard design software',
-      'Creating visually appealing designs',
-    ],
-  },
-  {
-    id: 8,
-    price: '25.00',
-    name: 'BRAND STORYTELLING',
-    description:
-      'Brand storytelling is a powerful marketing technique that helps businesses connect with their audience on a deeper level. This course explores the art of crafting compelling brand stories that resonate with customers and leave a lasting impact.',
-    image: '/images/branding.jpg',
-    stock: 7,
-    content: [
-      'Understanding the importance of brand storytelling',
-      'Identifying brand values and key messages',
-      'Crafting a compelling brand narrative',
-      'Utilizing storytelling techniques across different platforms',
-      'Measuring the effectiveness of brand storytelling',
-    ],
-  },
-];
+export const dataSite = {
+  name: 'Mirazul',
+  url: 'https://es.wiktionary.org/wiki/hol',
+  telephone: '5523021842',
+  email: 'mirazul@emailsecure.lat',
+  address:
+    'AV HOMERO 538, 303 B, POLANCO V SECCION, MIGUEL HIDALGO, CIUDAD DE MEXICO, C.P. 11560',
+  description:
+    'Our website is the go to digital platform for businesses and individuals seeking innovative engineering solutions. We offer a wide range of specialized services, from the design and development of industrial, civil, and mechanical projects to technical consulting and process optimization.',
+  subtitle: 'Engineering Excellence, Tailored for Your Success',
+  image_hero:
+    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/mira_1_.png',
+  image_hero2:
+    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/mira._2.png',
+  iconImage:
+    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/mirazul-high-resolution-logo.png',
+  info: [],
+  services: [
+    {
+      title: 'Project Design & Development',
+      description:
+        'Design and development of industrial, civil, or mechanical projects.',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mira_3.png',
+    },
+    {
+      title: 'Technical Consulting',
+      description:
+        'Specialized engineering consulting to optimize processes and solutions.',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mira_4_.png',
+    },
+    {
+      title: 'Process Optimization & Efficiency',
+      description:
+        'Improvement of production and operational processes for greater efficiency.',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mirarazul_5.png',
+    },
+    {
+      title: 'Structural Analysis & Testing',
+      description:
+        'Structural analysis and testing to ensure safety and quality.',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mira_6_.png',
+    },
+    {
+      title: 'Sustainable & Innovative Solutions',
+      description:
+        'Implementation of sustainable and innovative solutions tailored to each project.',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mira_7_.png',
+    },
+  ],
+  references: [
+    {
+      name: 'Raul,Product Development Manager',
+      description:
+        'The CAD & 3D Modeling service we received was exceptional. The team was not only fast and accurate, but they also offered design suggestions that improved the functionality of our part. Communication was seamless, and the client portal made it easy to track progress. We will definitely use their services again for future prototypes.',
+      rating: 5,
+      image: null,
+    },
+    {
+      name: 'Alejandro Roma',
+      description:
+        'We needed a complete structural analysis for a complex project, and the report they provided was incredibly detailed and easy to understand. Their team identified potential issues we had overlooked and offered practical, cost-effective solutions. Their professionalism and thoroughness gave us the confidence to move forward with the project. Highly recommended!',
+      rating: 5,
+      image: null,
+    },
+    {
+      name: 'Marlen Mendez',
+      description:
+        'We were looking to improve the efficiency of our production line, and their process optimization audit and solutions were a total game-changer. The team identified key bottlenecks and helped us implement a new workflow that has increased our output by 15%. The investment paid for itself in a matter of months. Excellent service.',
+      rating: 5,
+      image: null,
+    },
+    {
+      name: 'Javier Romero',
+      description:
+        'The implementation of custom automation modules for our warehouse has been a resounding success. The engineering team worked closely with us to understand our unique challenges and designed a solution that integrated perfectly with our existing systems. The efficiency and reduction in errors have exceeded our expectations.',
+      rating: 5,
+      image: null,
+    },
+    {
+      name: 'David Gutierrez',
+      description:
+        'We had an urgent technical challenge and needed expert consultation immediately. The engineering team not only responded quickly but also provided us with clear and actionable advice that helped us resolve the issue in record time. Their deep knowledge and ability to explain complex concepts were truly impressive',
+      rating: 5,
+      image: null,
+    },
+  ],
+  products: [
+    {
+      id: 1170,
+      name: 'Energy Efficiency Audits',
+      category: null,
+      description:
+        'Energy Efficiency Audits are systematic evaluations of a building, facility, or industrial process to identify opportunities for reducing energy consumption, lowering costs, and minimizing environmental impact. These audits provide actionable insights to improve energy performance and ensure compliance with sustainability standards.',
+      price: '150.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_12.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1167,
+      name: 'Prototype Development Kits',
+      category: null,
+      description:
+        'Prototype Development Kits (PDKs) are comprehensive toolsets designed to help developers, engineers, and designers quickly create, test, and refine new product ideas or electronic systems. They provide a hands-on environment for experimentation and proof-of-concept development.',
+      price: '230.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_9.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1168,
+      name: 'Structural Analysis Reports',
+      category: null,
+      description:
+        'Structural Analysis Reports provide detailed assessments of a building, infrastructure, or mechanical system’s structural integrity. They are used by engineers, architects, and construction professionals to ensure safety, compliance with regulations, and optimal design performance',
+      price: '240.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_10_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1169,
+      name: 'Automation System Solutions',
+      category: null,
+      description:
+        'Automation System Solutions are integrated systems designed to automate, monitor, and optimize processes in industrial, commercial, or residential settings. They combine hardware, software, and control technologies to improve efficiency, reduce errors, and enable real-time management.',
+      price: '140.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_11.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1174,
+      name: 'Technical Documentation Services',
+      category: null,
+      description:
+        'Technical Documentation Services provide professional creation, organization, and management of documents that explain, instruct, or support the use of products, systems, or processes. These services ensure clarity, compliance, and accessibility for engineers, developers, clients, and end-users.',
+      price: '90.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_16_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1171,
+      name: 'Engineering Software Tools',
+      category: null,
+      description:
+        'Engineering Software Tools are specialized applications designed to assist engineers in designing, modeling, simulating, and analyzing products, structures, or systems. They enhance precision, efficiency, and collaboration in engineering projects across various disciplines.',
+      price: '189.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/miraazul_13.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1172,
+      name: 'CAD & 3D Modeling Services',
+      category: null,
+      description:
+        'CAD & 3D Modeling Services provide professional computer-aided design and three-dimensional modeling solutions for products, structures, machinery, or architectural projects. These services help clients visualize, plan, and refine designs before production or construction.',
+      price: '120.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mia_azul_14.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1173,
+      name: 'Project Management Packages',
+      category: null,
+      description:
+        'Project Management Packages are comprehensive solutions designed to help organizations plan, execute, monitor, and complete projects efficiently. They provide tools, templates, and methodologies to streamline workflows, manage resources, and ensure projects are delivered on time and within budget.',
+      price: '240.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_15_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1175,
+      name: '3D Modeling for Mechanical Parts',
+      category: null,
+      description: '3D modeling specifically for mechanical components.',
+      price: '20.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_17_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1176,
+      name: 'Custom Automation Modules',
+      category: null,
+      description: 'Customized automation modules for industrial processes.',
+      price: '25.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/miraazul_18.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1177,
+      name: 'Structural Integrity Testing',
+      category: null,
+      description: 'Specialized testing of structural integrity.',
+      price: '30.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/miraazul_19.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1178,
+      name: 'Energy Consumption Reports',
+      category: null,
+      description: 'Detailed reports on energy usage and efficiency.',
+      price: '40.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mirazul_20_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1179,
+      name: 'Technical Drafting & Schematics',
+      category: null,
+      description: 'Preparation of detailed technical drawings and schematics.',
+      price: '48.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/miraazul_21.png',
+      image2: null,
+      image3: null,
+    },
+  ],
+  categories: [],
+};
 
-export const additionalProducts = [
+export const phoneNumber = dataSite.telephone;
+export const address = dataSite.address;
+export const contactData = [
   {
-    id: 9,
-    price: '15.00',
-    name: 'Social Media Template Pack',
-    description:
-      'A pack of 10 professionally designed and fully customizable templates for Instagram posts and stories. The perfect tool to maintain a consistent and attractive feed with minimal effort.',
-    image: '/images/media.jpg',
-    stock: 5000,
-    features: [
-      '10 customizable templates (Canva/PSD)',
-      'Instagram Post & Story formats',
-      'Modern and clean design',
-      'Includes a quick-start guide',
-      'Boosts visual consistency',
-    ],
+    Icon: IoCall,
+    text: phoneNumber,
   },
   {
-    id: 10,
-    price: '9.00',
-    name: 'Brand Style Quick Guide',
-    description:
-      'A concise PDF guide that walks you through choosing the right colors, fonts, and imagery for your brand. Understand the basics of visual identity to communicate your message effectively.',
-    image: '/images/brand.jpg',
-    stock: 5000,
-    features: [
-      'Color psychology basics',
-      'Font pairing suggestions',
-      'How to create a mood board',
-      '5-step brand identity checklist',
-      'Printable PDF format',
-    ],
+    Icon: IoFileTraySharp,
+    text: address,
   },
   {
-    id: 11,
-    price: '7.00',
-    name: '50 Engaging Content Prompts',
-    description:
-      "Beat writer's block forever with this curated list of 50 content ideas and headline prompts for your blog, social media, and newsletters. Spark creativity and keep your audience engaged.",
-    image: '/images/prompt.jpg',
-    stock: 5000,
-    features: [
-      '20 blog post ideas',
-      '20 social media prompts',
-      '10 newsletter subject line formulas',
-      'Designed to boost engagement',
-      'Instant digital download',
-    ],
-  },
-  {
-    id: 12,
-    price: '12.00',
-    name: 'Starter Audio Pack for Videos',
-    description:
-      'A curated collection of 5 royalty-free background music tracks and 10 essential sound effects to give your video content a professional touch. Perfect for social media clips and corporate videos.',
-    image: '/images/audio.jpg',
-    stock: 5000,
-    features: [
-      '5 royalty-free music tracks',
-      '10 common sound effects (SFX)',
-      'High-quality MP3 files',
-      'Suitable for commercial use',
-      'Instant download link',
-    ],
-  },
-];
-export const categoriesData = [
-  {
-    name: 'Social Media',
-    image: '/images/social.svg',
-    id: 1,
-    items: [
-      'Community Management',
-      'Content Strategy',
-      'Ad Campaigns',
-      'Analytics',
-    ],
-  },
-  {
-    name: 'Marketing',
-    image: '/images/marketing.svg',
-    id: 2,
-    items: ['SEO & SEM', 'Email Marketing', 'Branding', 'Public Relations'],
-  },
-  {
-    name: 'Business',
-    image: '/images/business.svg',
-    id: 3,
-    items: ['E-commerce', 'Startup Planning', 'Project Management', 'Finance'],
-  },
-  {
-    name: 'Content Creator',
-    image: '/images/content.svg',
-    id: 4,
-    items: ['Video Production', 'Podcasting', 'Blogging', 'Live Streaming'],
-  },
-  {
-    name: 'Web and Mobile Development',
-    image: '/images/development.svg',
-    id: 5,
-    items: [
-      'React & Next.js',
-      'UI/UX Design',
-      'iOS & Android Apps',
-      'Backend APIs',
-    ],
-  },
-];
-
-export const references = [
-  {
-    title: 'María López',
-    description:
-      'This course on Creative Writing has transformed the way I approach content creation. The strategies and techniques taught have helped me engage my audience and create unique and compelling content for my business. Highly recommended!',
-  },
-  {
-    title: 'Carlos Rodríguez',
-    description:
-      'The Video Production course provided me with valuable skills in shooting and editing videos. I now have the confidence to create professional-looking videos for my business, and the storytelling techniques I learned have made a significant impact on my audience engagement.',
-  },
-  {
-    title: 'Laura Fernández',
-    description:
-      'I took the Social Media Marketing course, and it exceeded my expectations. The strategies and content creation tips shared were practical and effective. I now have a better understanding of how to leverage social media to grow my business and connect with my target audience.',
-  },
-  {
-    title: 'Diego Gómez',
-    description:
-      'The Graphic Design course was a game-changer for me. I learned the principles of design, color theory, and how to use design software effectively. Now I can create visually appealing designs that perfectly represent my brand. Thank you for this valuable course!',
-  },
-  {
-    title: 'Isabel Silva',
-    description:
-      'Brand Storytelling course helped me understand the power of storytelling in building a strong brand. I learned how to craft a compelling brand narrative that resonates with my customers. It has made a significant difference in how my brand is perceived in the market.',
+    text: email,
+    Icon: IoMail,
   },
 ];

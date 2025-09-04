@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    domains: ['cms-webserver-statics.s3.amazonaws.com'],
+  },
+};
 
-module.exports = nextConfig
+export default nextConfig;

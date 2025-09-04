@@ -1,11 +1,11 @@
 'use client';
-import { additionalProducts, productsData } from '@/data';
+import { dataSite } from '@/data';
 import { MainProvider } from 'ui-old-version';
 
 const Provider = ({ children }) => {
   return (
     <MainProvider
-      products={productsData.concat(additionalProducts)}
+      products={dataSite.products}
       locale={'en'}
       colorPrimary={'#2792f0'}
     >

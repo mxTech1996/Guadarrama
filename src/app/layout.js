@@ -1,23 +1,23 @@
-"use client";
-import { fontLato, fontUrbanist } from "../fonts";
-import Provider from "@/store/provider";
-import { pageName } from "@/data";
-
-import "../styles/globals.css";
+'use client';
+import { fontLato, fontUrbanist } from '../fonts';
+import Provider from '@/store/provider';
+import { pageName } from '@/data';
+// BORRA ESTAS LÍNEAS DE TU COMPONENTE
+import '../styles/globals.css';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang='en' className='scroll-smooth'>
       <head>
         <title>{pageName}</title>
       </head>
-      <Provider>
-        <body
-          className={`${fontUrbanist.variable} ${fontLato.variable} text-primary font-lato`}
-        >
-          {children}
-        </body>
-      </Provider>
+      <body
+        className={`${fontUrbanist.variable} ${fontLato.variable} text-primary font-lato`}
+      >
+        <Provider>{children}</Provider>
+      </body>
     </html>
   );
 }
